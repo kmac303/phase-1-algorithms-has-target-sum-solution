@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // look through each number
+ for (let i = 0; i < array.length; i++) {
+   // look through the rest of the numbers
+   for (let j = i + 1; j < array.length; j++) {
+     // check if i + j = 10
+     if (array[i] + array[j] === target) {
+       return true;
+     }
+   }
+ }
+ return false;
 }
 
 /* 
